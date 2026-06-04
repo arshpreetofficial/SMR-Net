@@ -120,9 +120,6 @@ SMR-Net/
 │
 ├── checkpoints/
 │
-├── data/
-│   └── README.md
-│
 ├── splits/
 │   ├── adni_train.csv
 │   ├── adni_val.csv
