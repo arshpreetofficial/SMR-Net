@@ -1,6 +1,6 @@
 # SMR-Net
 
-## Learning Multi-Resolution Neuroanatomical Representations for Alzheimer's Disease Analysis through Cross-Resolution Fusion, Slice-Level Attention Aggregation, and Graph-Based Neuroanatomical Reasoning
+## A Multi-Resolution Neuroanatomical Representation Learning Framework for Modeling Alzheimer’s Disease-Related Structural Abnormalities through Cross-Resolution Fusion, Slice-Level Attention Aggregation, and Graph-Based Neuroanatomical Reasoning
 
 ---
 
