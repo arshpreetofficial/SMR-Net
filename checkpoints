@@ -1,0 +1,85 @@
+
+Training Dataset:
+ADNI
+
+Architecture:
+SMR-Net
+
+Components:
+
+* Multi-Resolution Learning (MRL)
+* Cross-Resolution Attention Fusion (CRAF)
+* Slice-Level Attention Aggregation (SLAA)
+* Graph-Based Neuroanatomical Reasoning (GNR)
+* Group Normalization (GN)
+
+Performance:
+
+* CN vs AD
+* MCI vs AD
+* CN vs MCI
+
+The checkpoint corresponds to the model achieving the highest validation accuracy during 10-fold cross-validation.
+
+---
+
+### Loading Checkpoint
+
+
+import torch
+from model import SMRNet
+
+model = SMRNet(num_classes=3)
+
+checkpoint = torch.load(
+    "checkpoints/smrnet_adni_best.pth",
+    map_location="cpu"
+)
+
+model.load_state_dict(checkpoint)
+model.eval()
+```
+
+---
+
+### Checkpoint Contents
+
+The saved checkpoint contains:
+
+* Model weights
+* Network parameters
+
+To save:
+
+
+torch.save(
+    model.state_dict(),
+    "checkpoints/smrnet_adni_best.pth"
+)
+```
+
+---
+
+### Full Training Checkpoint (Optional)
+
+
+torch.save({
+    'epoch': epoch,
+    'model_state_dict': model.state_dict(),
+    'optimizer_state_dict': optimizer.state_dict(),
+    'best_acc': best_acc
+}, 'checkpoints/smrnet_full_checkpoint.pth')
+```
+
+This allows training to resume from the last saved epoch.
+
+---
+
+### External Validation
+
+The ADNI-trained checkpoint is directly evaluated on:
+
+* OASIS
+* AIBL
+
+without additional fine-tuning to assess cross-cohort generalization.
