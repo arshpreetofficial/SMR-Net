@@ -1,0 +1,47 @@
+# splits/
+
+## adni_train.csv
+
+path,label
+data/ADNI/CN/cn_001.nii.gz,0
+data/ADNI/CN/cn_002.nii.gz,0
+data/ADNI/MCI/mci_001.nii.gz,1
+data/ADNI/MCI/mci_002.nii.gz,1
+data/ADNI/AD/ad_001.nii.gz,2
+data/ADNI/AD/ad_002.nii.gz,2
+
+---
+
+## adni_val.csv
+
+path,label
+data/ADNI/CN/cn_101.nii.gz,0
+data/ADNI/MCI/mci_101.nii.gz,1
+data/ADNI/AD/ad_101.nii.gz,2
+
+---
+
+## adni_test.csv
+
+path,label
+data/ADNI/CN/cn_201.nii.gz,0
+data/ADNI/MCI/mci_201.nii.gz,1
+data/ADNI/AD/ad_201.nii.gz,2
+
+---
+
+## oasis_test.csv
+
+path,label
+data/OASIS/CN/oasis_cn_001.nii.gz,0
+data/OASIS/MCI/oasis_mci_001.nii.gz,1
+data/OASIS/AD/oasis_ad_001.nii.gz,2
+
+---
+
+## aibl_test.csv
+
+path,label
+data/AIBL/CN/aibl_cn_001.nii.gz,0
+data/AIBL/MCI/aibl_mci_001.nii.gz,1
+data/AIBL/AD/aibl_ad_001.nii.gz,2
