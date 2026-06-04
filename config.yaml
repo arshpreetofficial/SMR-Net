@@ -1,0 +1,49 @@
+
+
+dataset:
+train_csv: splits/adni_train.csv
+val_csv: splits/adni_val.csv
+test_csv: splits/adni_test.csv
+oasis_csv: splits/oasis_test.csv
+aibl_csv: splits/aibl_test.csv
+
+preprocessing:
+image_size: 128
+num_slices: 32
+normalization: zscore
+skull_stripping: true
+bias_field_correction: true
+resampling: true
+
+model:
+name: SMR-Net
+num_classes: 3
+
+multi_resolution_learning:
+low_resolution_size: 64
+high_resolution_size: 128
+
+cross_resolution_fusion:
+enabled: true
+
+slice_level_attention:
+enabled: true
+
+graph_reasoning:
+enabled: true
+num_regions: 10
+graph_hidden_dim: 512
+
+training:
+epochs: 300
+batch_size: 4
+optimizer: adam
+learning_rate: 0.0001
+weight_decay: 0.00001
+early_stopping: 30
+
+
+
+cross_validation: 10
+
+seed: 42
