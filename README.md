@@ -129,17 +129,10 @@ SMR-Net/
 │   ├── oasis_test.csv
 │   └── aibl_test.csv
 │
-├── figures/
-│   ├── architecture.png
-│   ├── attention_visualization.png
-│   ├── graph_reasoning.png
-│   ├── reliability_diagram.png
-│   └── tsne_visualization.png
+
 │
 └── results/
-```
 
----
 
 ## Installation
 
